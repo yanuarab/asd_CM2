@@ -1,20 +1,23 @@
 import java.util.Scanner;
+
 public class SPBUmain04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         AntrianKendaraan04 antrian = new AntrianKendaraan04();
         AntrianTransaksi04 riwayat = new AntrianTransaksi04();
         int pilihan;
+
         do {
             System.out.println("\n--- MENU SPBU ---");
             System.out.println("1. Tambah Antrian Kendaraan");
             System.out.println("2. Tampilkan Antrian");
-            System.out.println("3. Lihat Antrian & Catat Transaksi");
-            System.out.println("4. Tampilkan Riwayat Transaksi");
-            System.out.println("5. Keluar");
-            System.out.print("Pilihan: ");
+            System.out.println("3. Jumlah Antrian");
+            System.out.println("4. Layani Kendaraan & Catat Transaksi");
+            System.out.println("5. Tampilkan Riwayat Transaksi");
+            System.out.println("0. Keluar");
+            System.out.print("Pilih: ");
             pilihan = sc.nextInt();
-            sc.nextLine();
+            sc.nextLine(); // konsumsi newline
 
             switch (pilihan) {
                 case 1:
@@ -27,7 +30,7 @@ public class SPBUmain04 {
 
                     Kendaraan04 k = new Kendaraan04(plat, tipe, merek);
                     antrian.enqueue(k);
-                    System.out.println(">> Kendaraan Masuk Antrian <<");
+                    System.out.println(">>> Kendaraan Masuk Antrian <<<");
                     break;
 
                 case 2:
@@ -39,11 +42,14 @@ public class SPBUmain04 {
                     break;
 
                 case 3:
+                    System.out.println(">> Ada " + antrian.ukuran() + " Antrian Kendaraan <<");
+                    break;
+
+                case 4:
                     if (antrian.ukuran() == 0) {
                         System.out.println(">> Antrian Kosong <<");
                         break;
                     }
-                    System.out.println(">> Ada " + antrian.ukuran() + " Antrian Kendaraan <<");
 
                     Kendaraan04 dilayani = antrian.layani();
                     System.out.println(">> Melayani <<");
@@ -55,7 +61,7 @@ public class SPBUmain04 {
                     double harga = sc.nextDouble();
                     System.out.print("Jumlah liter: ");
                     double liter = sc.nextDouble();
-                    sc.nextLine();
+                    sc.nextLine(); // konsumsi newline
 
                     BBM04 bbm = new BBM04(jenis, harga);
                     TransaksiPengisian04 pengisian = new TransaksiPengisian04(dilayani, bbm, liter);
@@ -63,18 +69,19 @@ public class SPBUmain04 {
                     System.out.println(">> Transaksi Tercatat <<");
                     break;
 
-                case 4:
+                case 5:
                     riwayat.tampilkan();
                     break;
 
-                case 5:
+                case 0:
                     System.out.println(">> Terima Kasih <<");
                     break;
 
                 default:
                     System.out.println(">> Pilihan Tidak Valid <<");
             }
-        } while (pilihan != 5);
-        sc.close(); 
+        } while (pilihan != 0);
+
+        sc.close();
     }
 }

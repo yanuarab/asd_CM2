@@ -3,7 +3,7 @@ public class TransaksiPengisian04 {
     BBM04 bbm;
     double liter, totalBayar;
 
-    public TransaksiPengisian04(Kendaraan04 Kendaraan, BBM04 bbm, double liter) {
+    public TransaksiPengisian04(Kendaraan04 kendaraan, BBM04 bbm, double liter) {
         this.kendaraan = kendaraan;
         this.bbm = bbm;
         this.liter = liter;
@@ -11,9 +11,9 @@ public class TransaksiPengisian04 {
     }
 
     public void tampilkanTransaksi() {
-        kendaraan.tampilkanInformasi();
+        kendaraan.tampilkanInformasi(); 
         System.out.println("BBM: " + bbm.namaBBM);
         System.out.println("Liter: " + liter);
-        System.out.println("Total bayar: RP" + totalBayar);
+        System.out.println("Total bayar: Rp" + totalBayar);
     }
 }

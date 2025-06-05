@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class SPBUmain04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -17,7 +16,7 @@ public class SPBUmain04 {
             System.out.println("5. Keluar");
             System.out.print("Pilihan: ");
             pilihan = sc.nextInt();
-            sc.nextLine(); // konsumsi newline
+            sc.nextLine();
 
             switch (pilihan) {
                 case 1:
@@ -34,18 +33,21 @@ public class SPBUmain04 {
                     break;
 
                 case 2:
-                    antrian.tampilkan();
+                    if (antrian.ukuran() == 0) {
+                        System.out.println(">> Antrian Kosong <<");
+                    } else {
+                        antrian.tampilkan();
+                    }
                     break;
 
                 case 3:
+                    if (antrian.ukuran() == 0) {
+                        System.out.println(">> Antrian Kosong <<");
+                        break;
+                    }
                     System.out.println(">> Ada " + antrian.ukuran() + " Antrian Kendaraan <<");
 
                     Kendaraan04 dilayani = antrian.layani();
-                    if (dilayani == null) {
-                        System.out.println(">> Tidak Ada Kendaraan <<");
-                        break;
-                    }
-
                     System.out.println(">> Melayani <<");
                     dilayani.tampilkanInformasi();
 
@@ -55,7 +57,7 @@ public class SPBUmain04 {
                     double harga = sc.nextDouble();
                     System.out.print("Jumlah liter: ");
                     double liter = sc.nextDouble();
-                    sc.nextLine(); // konsumsi newline
+                    sc.nextLine();
 
                     BBM04 bbm = new BBM04(jenis, harga);
                     TransaksiPengisian04 pengisian = new TransaksiPengisian04(dilayani, bbm, liter);
@@ -75,7 +77,6 @@ public class SPBUmain04 {
                     System.out.println(">> Pilihan Tidak Valid <<");
             }
         } while (pilihan != 5);
-
-        sc.close(); // menutup scanner
+        sc.close(); 
     }
 }

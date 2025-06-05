@@ -2,7 +2,7 @@ public class AntrianTransaksi04 {
     TransaksiPengisian04[] data;
     int front, rear, size, kapasitas;
 
-    public AntrianTransaksi04(int kapasitas){
+    public AntrianTransaksi04(){
         this.kapasitas = kapasitas;
         data = new TransaksiPengisian04[kapasitas];
         front = rear = size = 0;

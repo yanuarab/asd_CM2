@@ -4,9 +4,7 @@ public class SPBUmain04 {
         Scanner sc = new Scanner(System.in);
         AntrianKendaraan04 antrian = new AntrianKendaraan04();
         AntrianTransaksi04 riwayat = new AntrianTransaksi04();
-
         int pilihan;
-
         do {
             System.out.println("\n--- MENU SPBU ---");
             System.out.println("1. Tambah Antrian Kendaraan");

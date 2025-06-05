@@ -3,7 +3,7 @@ public class Node04 {
     Node04 next;
 
     public Node04(Kendaraan04 data) {
-        this.data = data;
+         this.data = data;
         this.next = null;
     }
 }

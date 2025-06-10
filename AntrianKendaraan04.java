@@ -1,3 +1,4 @@
+// linked 
 public class AntrianKendaraan04 {
     Node04 head, tail;
     int size;

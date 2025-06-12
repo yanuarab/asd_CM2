@@ -1,4 +1,4 @@
-public class AntrianTransaksi04 { //queue
+public class AntrianTransaksi04 { //queue j
     TransaksiPengisian04[] data;
     int front, rear, size, kapasitas;
 

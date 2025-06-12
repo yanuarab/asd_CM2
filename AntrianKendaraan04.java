@@ -1,5 +1,5 @@
 // linked 
-public class AntrianKendaraan04 {
+public class AntrianKendaraan04 { //y
     Node04 head, tail;
     int size;
 

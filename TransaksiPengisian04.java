@@ -1,4 +1,4 @@
-public class TransaksiPengisian04 {
+public class TransaksiPengisian04 { //j
     Kendaraan04 kendaraan;
     BBM04 bbm;
     double liter, totalBayar;

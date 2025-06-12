@@ -1,4 +1,4 @@
-public class BBM04 {
+public class BBM04 { //bbm
     String namaBBM;
     double hargaPerLiter;
 

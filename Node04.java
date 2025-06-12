@@ -1,4 +1,4 @@
-public class Node04 {
+public class Node04 { // j
     Kendaraan04 data;
     Node04 next;
 

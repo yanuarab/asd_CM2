@@ -1,4 +1,4 @@
-public class Kendaraan04 {
+public class Kendaraan04 { //y
     String platNomor, tipe, merk;
 
     public Kendaraan04(String plat, String tipe, String merk){

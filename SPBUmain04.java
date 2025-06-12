@@ -17,7 +17,7 @@ public class SPBUmain04 {
             System.out.println("0. Keluar");
             System.out.print("Pilih: ");
             pilihan = sc.nextInt();
-            sc.nextLine(); // konsumsi newline
+            sc.nextLine(); 
 
             switch (pilihan) {
                 case 1:
